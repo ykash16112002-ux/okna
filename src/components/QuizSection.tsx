@@ -130,13 +130,13 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
                 Квиз-расчёт — 5 простых шагов
               </h2>
               
-              <div className="flex items-center gap-3 mt-2 flex-wrap">
-                <span className="text-[14px] sm:text-[15px] text-[#B0B0B0] font-medium">
+              <div className="flex items-center gap-2.5 sm:gap-3 mt-2 flex-wrap">
+                <span className="text-[13.5px] sm:text-[15px] text-[#B0B0B0] font-medium leading-relaxed">
                   Оставьте заявку, и мы подберём оптимальное решение под ваш объект
                 </span>
-                {/* Larger Red decorative squiggle next to subtitle */}
+                {/* Red decorative squiggle */}
                 <svg
-                  className="w-20 sm:w-24 h-5 text-[#E50916] inline-block flex-shrink-0"
+                  className="w-16 sm:w-24 h-4 sm:h-5 text-[#E50916] inline-block flex-shrink-0"
                   viewBox="0 0 60 16"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -152,8 +152,8 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
               </div>
             </div>
 
-            {/* 5 Connected Steps in One Horizontal Flow (Enlarged Text) */}
-            <div className="flex items-start justify-between gap-3 sm:gap-4 mb-9 overflow-x-auto pb-2">
+            {/* 5 Steps: Mobile clean vertical/2-col flow, Desktop horizontal flow */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:items-start md:justify-between gap-2.5 sm:gap-4 mb-8 sm:mb-9">
               {stepsList.map((step, idx) => (
                 <React.Fragment key={step.num}>
                   {/* Step Item */}
@@ -162,22 +162,22 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
                       setCurrentStep(step.num);
                       setIsModalOpen(true);
                     }}
-                    className="flex items-start gap-3 min-w-[130px] sm:min-w-0 flex-1 cursor-pointer group"
+                    className="flex items-center md:items-start gap-3 p-3 md:p-0 rounded-xl bg-[#1B1B1B] md:bg-transparent border border-[#2B2B2B] md:border-transparent flex-1 cursor-pointer group hover:border-[#E50916]/40 transition-colors"
                   >
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E50916] text-white flex items-center justify-center font-extrabold text-[13px] sm:text-[14px] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform shadow-xs">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E50916] text-white flex items-center justify-center font-extrabold text-[13px] sm:text-[14px] flex-shrink-0 group-hover:scale-110 transition-transform shadow-xs">
                       {step.num}
                     </div>
                     <div>
-                      <div className="font-extrabold text-[14px] sm:text-[15px] text-white group-hover:text-[#E50916] transition-colors leading-snug">
+                      <div className="font-extrabold text-[13.5px] sm:text-[15px] text-white group-hover:text-[#E50916] transition-colors leading-snug">
                         {step.title}
                       </div>
-                      <div className="text-[11.5px] sm:text-[12px] text-[#8E8E8E] leading-tight mt-1">
+                      <div className="text-[11.5px] sm:text-[12px] text-[#8E8E8E] leading-tight mt-0.5">
                         {step.sub}
                       </div>
                     </div>
                   </div>
 
-                  {/* Connecting line between steps */}
+                  {/* Connecting line between steps on desktop */}
                   {idx < stepsList.length - 1 && (
                     <div className="hidden md:flex items-center pt-3 flex-shrink-0">
                       <div className="w-4 sm:w-6 lg:w-8 h-[1px] bg-[#3A3A3A]" />

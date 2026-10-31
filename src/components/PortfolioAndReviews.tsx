@@ -90,7 +90,7 @@ export const PortfolioAndReviews: React.FC<PortfolioAndReviewsProps> = ({
 
                   {/* Footer */}
                   <div className="p-3 sm:p-3.5 bg-white flex-1 flex flex-col justify-center">
-                    <h3 className="font-bold text-[12.5px] sm:text-[13.5px] text-[#111111] leading-tight line-clamp-1 mb-1">
+                    <h3 className="font-bold text-[12px] sm:text-[13.5px] text-[#111111] leading-tight min-h-[28px] sm:min-h-[32px] flex items-center mb-1">
                       {item.title}
                     </h3>
                     <div className="text-[10.5px] sm:text-[11.5px] text-[#777777] font-medium leading-tight">

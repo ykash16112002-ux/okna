@@ -29,7 +29,12 @@ export const ProfilesSection: React.FC<ProfilesSectionProps> = ({
           
           {/* Left Column (8 cols): Wider Table without cutaway images */}
           <div className="lg:col-span-8 overflow-x-auto">
-            <div className="min-w-[620px] border border-[#E5E5E5] rounded-2xl overflow-hidden bg-white shadow-xs">
+            {/* Mobile swipe helper */}
+            <div className="flex sm:hidden items-center justify-between text-[11.5px] font-semibold text-[#888888] mb-2 px-1">
+              <span>← Проведите пальцем для сравнения →</span>
+              <span className="text-[#E50916]">3 профиля</span>
+            </div>
+            <div className="min-w-[560px] sm:min-w-[620px] border border-[#E5E5E5] rounded-2xl overflow-hidden bg-white shadow-xs">
               
               {/* Table Header: 3 Profiles with clean names (NO cutaway images as requested) */}
               <div className="grid grid-cols-4 bg-[#FBFBFB] border-b border-[#E5E5E5] p-4 sm:p-5 items-center">

@@ -50,7 +50,7 @@ export const StagesSection: React.FC = () => {
                   {stage.num}
                 </div>
 
-                <h3 className="font-extrabold text-[15px] sm:text-[16px] text-[#111111] leading-snug">
+                <h3 className="font-extrabold text-[13.5px] sm:text-[15px] lg:text-[16px] text-[#111111] leading-snug break-words">
                   {stage.title}
                 </h3>
               </div>

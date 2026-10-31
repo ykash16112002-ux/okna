@@ -89,7 +89,7 @@ export default function App() {
         onNavigateTo={scrollToSection}
       />
 
-      <main className="flex-1">
+      <main className="flex-1 pb-16 md:pb-0">
         {/* 2. Hero Section */}
         <Hero onStartQuiz={handleStartQuiz} />
 

@@ -17,23 +17,23 @@ export const Hero: React.FC<HeroProps> = ({ onStartQuiz }) => {
           <div className="w-full lg:col-span-5 xl:col-span-5 2xl:col-span-5 flex flex-col justify-center">
             
             {/* Red Kicker */}
-            <div className="text-[#E50916] text-[15px] sm:text-[16px] font-bold tracking-tight mb-2.5">
+            <div className="text-[#E50916] text-[13.5px] sm:text-[15px] xl:text-[16px] font-bold tracking-tight mb-2 sm:mb-2.5">
               Окна от производителя в Калининграде
             </div>
 
-            {/* H1 Heading (Larger) */}
-            <h1 className="text-[40px] sm:text-[46px] lg:text-[48px] xl:text-[54px] 2xl:text-[60px] font-extrabold text-[#111111] leading-[1.05] tracking-tight">
+            {/* H1 Heading (Responsive to avoid collision) */}
+            <h1 className="text-[32px] sm:text-[44px] lg:text-[48px] xl:text-[54px] 2xl:text-[60px] font-extrabold text-[#111111] leading-[1.08] sm:leading-[1.05] tracking-tight">
               Пластиковые окна <br />
               и остекление
             </h1>
 
             {/* Handwritten Accent with Red Swoosh */}
-            <div className="relative inline-block mt-1 sm:mt-1.5 mb-3.5 sm:mb-4.5">
-              <span className="font-script text-[38px] sm:text-[44px] lg:text-[46px] xl:text-[52px] 2xl:text-[58px] text-[#111111] font-bold tracking-normal italic leading-none">
+            <div className="relative inline-block mt-1 sm:mt-1.5 mb-3 sm:mb-4.5">
+              <span className="font-script text-[32px] sm:text-[42px] lg:text-[46px] xl:text-[52px] 2xl:text-[58px] text-[#111111] font-bold tracking-normal italic leading-none">
                 от производителя
               </span>
               <svg
-                className="w-56 sm:w-64 xl:w-72 h-3.5 text-[#E50916] -mt-1"
+                className="w-48 sm:w-64 xl:w-72 h-3.5 text-[#E50916] -mt-1"
                 viewBox="0 0 200 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -48,65 +48,65 @@ export const Hero: React.FC<HeroProps> = ({ onStartQuiz }) => {
             </div>
 
             {/* Subtitle */}
-            <p className="text-[17px] sm:text-[18.5px] xl:text-[20px] text-[#333333] font-medium mb-6 lg:mb-7 leading-relaxed">
+            <p className="text-[15px] sm:text-[18px] xl:text-[20px] text-[#333333] font-medium mb-6 lg:mb-7 leading-relaxed">
               Свой завод, монтаж по ГОСТ, замер бесплатно
             </p>
 
             {/* CTA Button + Phone Row */}
-            <div className="flex flex-wrap items-center gap-5 sm:gap-6 mb-7 lg:mb-8">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 mb-7 lg:mb-8">
               <button
                 type="button"
                 onClick={onStartQuiz}
-                className="bg-[#E50916] hover:bg-[#D00814] active:scale-[0.98] text-white px-8 sm:px-9 py-4 sm:py-4.5 rounded-xl font-bold text-[16.5px] sm:text-[17.5px] flex items-center gap-3 transition-all shadow-md hover:shadow-xl cursor-pointer group whitespace-nowrap"
+                className="bg-[#E50916] hover:bg-[#D00814] active:scale-[0.98] text-white px-7 sm:px-9 py-3.5 sm:py-4.5 rounded-xl font-bold text-[15.5px] sm:text-[17.5px] flex items-center justify-center gap-2.5 transition-all shadow-md hover:shadow-xl cursor-pointer group whitespace-nowrap"
               >
                 <span>Рассчитать за 1 минуту</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </button>
 
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
-                  <Phone className="w-5 h-5 fill-current" />
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
+                  <Phone className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-current" />
                 </div>
                 <div>
                   <a
                     href="tel:84012376868"
-                    className="block font-bold text-[17.5px] sm:text-[18.5px] text-[#111111] hover:text-[#E50916] transition-colors leading-tight"
+                    className="block font-bold text-[16.5px] sm:text-[18.5px] text-[#111111] hover:text-[#E50916] transition-colors leading-tight"
                   >
                     8 (4012) 37-68-68
                   </a>
-                  <span className="text-[12px] sm:text-[12.5px] text-[#777777] font-medium block mt-0.5">
+                  <span className="text-[11.5px] sm:text-[12.5px] text-[#777777] font-medium block mt-0.5">
                     Звоните с 8.00 до 20.00
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* 3 Key Advantages with Icons */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-5 border-t border-gray-100 max-w-[560px]">
-              <div className="flex items-center gap-2.5 sm:gap-3">
-                <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
-                  <Factory className="w-5 h-5" />
+            {/* 3 Key Advantages with Icons (Vertical on mobile, 3-column on tablet/desktop to eliminate text collisions) */}
+            <div className="flex flex-col sm:grid sm:grid-cols-3 gap-3 sm:gap-4 pt-5 border-t border-gray-100 max-w-[560px]">
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
+                  <Factory className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
                 </div>
-                <div className="text-[12.5px] sm:text-[13.5px] font-semibold text-[#222222] leading-tight">
-                  Собственное <br />производство
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2.5 sm:gap-3">
-                <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
-                  <ShieldCheck className="w-5 h-5" />
-                </div>
-                <div className="text-[12.5px] sm:text-[13.5px] font-semibold text-[#222222] leading-tight">
-                  Монтаж <br />по ГОСТ
+                <div className="text-[13px] sm:text-[13.5px] font-semibold text-[#222222] leading-tight">
+                  Собственное производство
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5 sm:gap-3">
-                <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
-                  <Truck className="w-5 h-5" />
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
+                  <ShieldCheck className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
                 </div>
-                <div className="text-[12.5px] sm:text-[13.5px] font-semibold text-[#222222] leading-tight">
-                  Замер <br />бесплатно
+                <div className="text-[13px] sm:text-[13.5px] font-semibold text-[#222222] leading-tight">
+                  Монтаж по ГОСТ
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
+                  <Truck className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
+                </div>
+                <div className="text-[13px] sm:text-[13.5px] font-semibold text-[#222222] leading-tight">
+                  Замер бесплатно
                 </div>
               </div>
             </div>

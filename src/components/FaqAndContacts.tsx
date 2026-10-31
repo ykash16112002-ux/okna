@@ -125,8 +125,8 @@ export const FaqAndContacts: React.FC<FaqAndContactsProps> = ({
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-3.5">
-                  {/* Two inputs side-by-side matching reference photo */}
-                  <div className="grid grid-cols-2 gap-3">
+                  {/* Two inputs: 1-col on mobile, side-by-side on tablet/desktop */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                       <input
                         type="text"

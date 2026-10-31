@@ -7,14 +7,14 @@ interface DirectorAddressProps {
 
 export const DirectorAddress: React.FC<DirectorAddressProps> = () => {
   return (
-    <section id="about" className="bg-[#111111] text-white py-14 sm:py-20 border-b border-white/5 overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+    <section id="about" className="bg-[#111111] text-white py-10 sm:py-20 border-b border-white/5 overflow-hidden">
+      <div className="max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-10 xl:gap-12 items-center">
           
           {/* Left: Heading with Larger Red Dash Line */}
           <div className="lg:col-span-3">
-            <div className="w-14 sm:w-16 h-1.5 bg-[#E50916] rounded-full mb-4" />
-            <h2 className="text-[28px] sm:text-[32px] xl:text-[36px] font-extrabold text-white tracking-tight leading-tight">
+            <div className="w-12 sm:w-16 h-1.5 bg-[#E50916] rounded-full mb-3 sm:mb-4" />
+            <h2 className="text-[26px] sm:text-[32px] xl:text-[36px] font-extrabold text-white tracking-tight leading-tight">
               Что говорит <br className="hidden sm:inline" />
               руководитель
             </h2>
@@ -22,23 +22,23 @@ export const DirectorAddress: React.FC<DirectorAddressProps> = () => {
 
           {/* Middle: Stretched Quote with Big Bold Red Quotes and Director Name */}
           <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-between">
-            <div className="flex items-start gap-3">
-              <span className="text-[#E50916] text-[48px] sm:text-[56px] font-black leading-none flex-shrink-0 select-none -mt-2.5">
+            <div className="flex items-start gap-2.5 sm:gap-3">
+              <span className="text-[#E50916] text-[40px] sm:text-[56px] font-black leading-none flex-shrink-0 select-none -mt-2">
                 “
               </span>
-              <p className="text-[15.5px] sm:text-[17px] leading-relaxed text-[#D6D6D6] font-normal">
+              <p className="text-[14.5px] sm:text-[17px] leading-relaxed text-[#D6D6D6] font-normal">
                 Мы производим окна и остекление в Калининграде уже много лет. Для нас это не просто работа — это ответственность перед каждым клиентом. Мы контролируем качество на всех этапах, от замера до монтажа, и уверены в своём продукте.
-                <span className="text-[#E50916] text-[34px] sm:text-[38px] font-black ml-1 select-none leading-none">”</span>
+                <span className="text-[#E50916] text-[28px] sm:text-[38px] font-black ml-1 select-none leading-none">”</span>
               </p>
             </div>
 
-            <div className="mt-5 pl-8 flex items-center gap-4">
-              <div className="w-6 h-px bg-[#E50916]" />
+            <div className="mt-4 sm:mt-5 pl-0 sm:pl-8 flex items-center gap-3 sm:gap-4">
+              <div className="w-5 sm:w-6 h-px bg-[#E50916]" />
               <div>
-                <div className="font-extrabold text-[16px] text-white leading-tight">
+                <div className="font-extrabold text-[15px] sm:text-[16px] text-white leading-tight">
                   Вячеслав Пыталев
                 </div>
-                <div className="text-[12.5px] text-[#888888] font-medium mt-0.5">
+                <div className="text-[12px] sm:text-[12.5px] text-[#888888] font-medium mt-0.5">
                   Директор компании
                 </div>
               </div>
@@ -47,7 +47,7 @@ export const DirectorAddress: React.FC<DirectorAddressProps> = () => {
 
           {/* Right: Personal Guarantee Card strictly from Reference */}
           <div className="lg:col-span-4 xl:col-span-4 flex justify-start lg:justify-end">
-            <div className="bg-[#181818] border border-[#2B2B2B] rounded-2xl p-5 sm:p-6 text-white flex flex-col justify-between max-w-[340px] w-full shadow-2xl">
+            <div className="bg-[#181818] border border-[#2B2B2B] rounded-2xl p-5 sm:p-6 text-white flex flex-col justify-between max-w-full sm:max-w-[340px] w-full shadow-2xl">
               <div>
                 <div className="flex items-center gap-3.5 mb-3">
                   <div className="w-10 h-10 rounded-xl bg-red-950/60 border border-red-800/40 flex items-center justify-center text-[#E50916] flex-shrink-0">

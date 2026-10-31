@@ -28,12 +28,12 @@ export const MobileBottomBar: React.FC<MobileBottomBarProps> = ({
         <button
           type="button"
           onClick={onOpenMessengers}
-          className="flex items-center justify-center gap-1 px-1.5 py-3 text-center active:bg-[#CC0813] transition-colors cursor-pointer"
+          className="flex items-center justify-center gap-1.5 px-2 py-3 text-center active:bg-[#CC0813] transition-colors cursor-pointer"
           aria-label="Написать в WhatsApp или Telegram"
         >
-          <MessageCircle className="w-4 h-4" />
-          <span className="text-[11px] sm:text-[12px] font-bold tracking-tight leading-tight line-clamp-1">
-            WhatsApp / Telegram / MAX
+          <MessageCircle className="w-4 h-4 flex-shrink-0" />
+          <span className="text-[12px] font-bold tracking-tight whitespace-nowrap">
+            Мессенджеры
           </span>
         </button>
 

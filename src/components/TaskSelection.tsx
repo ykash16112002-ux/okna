@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRightIcon } from './icons/Icons.tsx';
 
 export interface TaskItem {
   id: string;
@@ -102,7 +102,7 @@ export const TaskSelection: React.FC<TaskSelectionProps> = ({ onSelectTask }) =>
                 </div>
 
                 <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#E50916] text-white flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:bg-[#D00814] transition-all shadow-xs">
-                  <ArrowRight className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5" />
+                  <ArrowRightIcon className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5" />
                 </div>
               </div>
             </button>

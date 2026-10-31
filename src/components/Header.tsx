@@ -9,7 +9,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ onOpenConsultation, onNavigateTo }) => {
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-[#E7E7E7] h-[64px] flex items-center transition-all">
-      <div className="max-w-[1440px] w-full mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between gap-4">
+      <div className="max-w-[1780px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 flex items-center justify-between gap-4">
         {/* Brand Logo */}
         <a
           href="#"

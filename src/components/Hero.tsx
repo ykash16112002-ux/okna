@@ -7,33 +7,33 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onStartQuiz }) => {
   return (
-    <section className="bg-white lg:h-[calc(100svh-64px)] lg:max-h-[calc(100svh-64px)] lg:min-h-[560px] flex items-center overflow-hidden relative border-b border-gray-100">
+    <section className="bg-white lg:h-[calc(100svh-64px)] lg:max-h-[calc(100svh-64px)] lg:min-h-[580px] flex items-center overflow-hidden relative border-b border-gray-100">
       
-      {/* Main Container: 1440px wide, centered */}
-      <div className="max-w-[1440px] w-full mx-auto px-6 sm:px-8 lg:px-12 py-8 lg:py-6 relative z-10 pointer-events-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+      {/* Wide Container: Minimal side whitespace matching reference */}
+      <div className="max-w-[1780px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 py-6 lg:py-4 relative z-10 pointer-events-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 xl:gap-8 2xl:gap-10 items-center">
           
-          {/* Left Column: Heading, Subtitle, CTA, Badges (6 cols on lg) */}
-          <div className="w-full lg:col-span-6 xl:col-span-6 flex flex-col justify-center">
+          {/* Left Column: Heading, Subtitle, CTA, Badges (5 cols on lg for a compact, bold text block) */}
+          <div className="w-full lg:col-span-5 xl:col-span-5 2xl:col-span-5 flex flex-col justify-center">
             
             {/* Red Kicker */}
-            <div className="text-[#E50916] text-[14.5px] sm:text-[16px] font-bold tracking-tight mb-3">
+            <div className="text-[#E50916] text-[15px] sm:text-[16px] font-bold tracking-tight mb-2.5">
               Окна от производителя в Калининграде
             </div>
 
             {/* H1 Heading (Larger) */}
-            <h1 className="text-[38px] sm:text-[46px] lg:text-[50px] xl:text-[56px] font-extrabold text-[#111111] leading-[1.06] tracking-tight">
+            <h1 className="text-[40px] sm:text-[46px] lg:text-[48px] xl:text-[54px] 2xl:text-[60px] font-extrabold text-[#111111] leading-[1.05] tracking-tight">
               Пластиковые окна <br />
               и остекление
             </h1>
 
-            {/* Handwritten Accent with Red Swoosh (Larger) */}
-            <div className="relative inline-block mt-1 sm:mt-2 mb-3.5 sm:mb-5">
-              <span className="font-script text-[36px] sm:text-[44px] lg:text-[46px] xl:text-[52px] text-[#111111] font-bold tracking-normal italic leading-none">
+            {/* Handwritten Accent with Red Swoosh */}
+            <div className="relative inline-block mt-1 sm:mt-1.5 mb-3.5 sm:mb-4.5">
+              <span className="font-script text-[38px] sm:text-[44px] lg:text-[46px] xl:text-[52px] 2xl:text-[58px] text-[#111111] font-bold tracking-normal italic leading-none">
                 от производителя
               </span>
               <svg
-                className="w-56 sm:w-64 h-3.5 text-[#E50916] -mt-1"
+                className="w-56 sm:w-64 xl:w-72 h-3.5 text-[#E50916] -mt-1"
                 viewBox="0 0 200 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,13 +47,13 @@ export const Hero: React.FC<HeroProps> = ({ onStartQuiz }) => {
               </svg>
             </div>
 
-            {/* Subtitle (Larger) */}
-            <p className="text-[17px] sm:text-[18.5px] xl:text-[20px] text-[#333333] font-medium mb-7 lg:mb-8 leading-relaxed">
+            {/* Subtitle */}
+            <p className="text-[17px] sm:text-[18.5px] xl:text-[20px] text-[#333333] font-medium mb-6 lg:mb-7 leading-relaxed">
               Свой завод, монтаж по ГОСТ, замер бесплатно
             </p>
 
-            {/* CTA Button + Phone Row (Larger) */}
-            <div className="flex flex-wrap items-center gap-5 sm:gap-7 mb-7 lg:mb-9">
+            {/* CTA Button + Phone Row */}
+            <div className="flex flex-wrap items-center gap-5 sm:gap-6 mb-7 lg:mb-8">
               <button
                 type="button"
                 onClick={onStartQuiz}
@@ -81,9 +81,9 @@ export const Hero: React.FC<HeroProps> = ({ onStartQuiz }) => {
               </div>
             </div>
 
-            {/* 3 Key Advantages with Icons (Larger) */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-100 max-w-[540px]">
-              <div className="flex items-center gap-3">
+            {/* 3 Key Advantages with Icons */}
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-5 border-t border-gray-100 max-w-[560px]">
+              <div className="flex items-center gap-2.5 sm:gap-3">
                 <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
                   <Factory className="w-5 h-5" />
                 </div>
@@ -92,7 +92,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartQuiz }) => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2.5 sm:gap-3">
                 <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
@@ -101,7 +101,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartQuiz }) => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2.5 sm:gap-3">
                 <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
                   <Truck className="w-5 h-5" />
                 </div>
@@ -113,32 +113,32 @@ export const Hero: React.FC<HeroProps> = ({ onStartQuiz }) => {
 
           </div>
 
-          {/* Right Column: Centered Photo Placeholder Frame (Enlarged and Higher) */}
-          <div className="hidden lg:flex lg:col-span-6 xl:col-span-6 justify-center items-center w-full">
-            <div className="w-full max-w-[620px] h-[480px] xl:h-[530px] rounded-3xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-50 via-gray-100/70 to-gray-200/50 flex flex-col items-center justify-center p-8 relative overflow-hidden shadow-inner mx-auto">
+          {/* Right Column: Much Larger, Stretched Photo Placeholder Frame (7 cols on lg, filling space to right edge) */}
+          <div className="hidden lg:flex lg:col-span-7 xl:col-span-7 2xl:col-span-7 justify-end items-center w-full">
+            <div className="w-full h-[510px] xl:h-[560px] 2xl:h-[620px] rounded-[28px] border-2 border-dashed border-[#CCD2DB] bg-gradient-to-br from-[#FAFAFC] via-[#F3F5F8] to-[#E9EDF2] flex flex-col items-center justify-center p-8 relative overflow-hidden shadow-inner">
               
-              {/* Subtle grid pattern background */}
-              <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] [background-size:16px_16px] opacity-40 pointer-events-none" />
+              {/* Subtle dot pattern background matching reference */}
+              <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1.2px,transparent_1.2px)] [background-size:18px_18px] opacity-45 pointer-events-none" />
 
               {/* Placeholder Center Icon & Text */}
               <div className="flex flex-col items-center justify-center text-center z-10">
-                <div className="w-20 h-20 rounded-2xl bg-white shadow-md border border-gray-200 flex items-center justify-center text-gray-400 mb-4">
+                <div className="w-20 h-20 rounded-2xl bg-white shadow-md border border-gray-200/80 flex items-center justify-center text-gray-400 mb-4 transition-transform hover:scale-105">
                   <svg className="w-10 h-10 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                     <circle cx="8.5" cy="8.5" r="1.5" />
                     <polyline points="21 15 16 10 5 21" />
                   </svg>
                 </div>
-                <div className="font-extrabold text-[18px] sm:text-[20px] text-gray-700 tracking-tight">
+                <div className="font-extrabold text-[19px] sm:text-[21px] text-[#2D3748] tracking-tight">
                   Плашка под главное фото
                 </div>
-                <div className="text-[13.5px] sm:text-[14.5px] text-gray-500 font-medium mt-1.5">
+                <div className="text-[14px] sm:text-[15px] text-[#718096] font-medium mt-1.5">
                   Фото директора на собственном производстве
                 </div>
               </div>
 
-              {/* Standalone HTML/CSS Red Badge: «Производитель» */}
-              <div className="absolute top-5 right-5 z-20 bg-[#E50916] text-white px-4 py-2.5 rounded-2xl shadow-lg flex items-center gap-2.5 border border-red-500/40 select-none">
+              {/* Standalone HTML/CSS Red Badge: «Производитель» (top-right corner) */}
+              <div className="absolute top-5 right-5 sm:top-6 sm:right-6 z-20 bg-[#E50916] text-white px-4 py-2.5 rounded-2xl shadow-lg flex items-center gap-2.5 border border-red-500/40 select-none">
                 <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
                   <svg className="w-4.5 h-4.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="3" />
@@ -155,13 +155,13 @@ export const Hero: React.FC<HeroProps> = ({ onStartQuiz }) => {
                 </div>
               </div>
 
-              {/* Standalone HTML/CSS Director Signature */}
-              <div className="absolute bottom-5 right-6 z-20 select-none text-right">
-                <div className="font-script text-[28px] sm:text-[32px] text-gray-800 leading-none tracking-wide italic">
+              {/* Standalone HTML/CSS Director Signature matching reference (bottom-right corner) */}
+              <div className="absolute bottom-5 right-6 sm:bottom-6 sm:right-8 z-20 select-none text-right">
+                <div className="font-script text-[32px] sm:text-[36px] xl:text-[40px] text-[#1E293B] leading-none tracking-wide italic">
                   Вячеслав Пыталев
                 </div>
-                <div className="text-[12px] text-gray-600 font-semibold tracking-wider uppercase mt-0.5">
-                  Директор
+                <div className="text-[11px] sm:text-[12px] font-bold text-[#475569] uppercase tracking-[0.2em] mt-0.5">
+                  ДИРЕКТОР
                 </div>
               </div>
 

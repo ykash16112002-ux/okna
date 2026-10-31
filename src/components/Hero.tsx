@@ -17,23 +17,23 @@ export const Hero: React.FC<HeroProps> = ({ onStartQuiz }) => {
           <div className="w-full lg:col-span-6 xl:col-span-6 flex flex-col justify-center">
             
             {/* Red Kicker */}
-            <div className="text-[#E50916] text-[13.5px] sm:text-[14.5px] font-bold tracking-tight mb-2.5">
+            <div className="text-[#E50916] text-[14.5px] sm:text-[16px] font-bold tracking-tight mb-3">
               Окна от производителя в Калининграде
             </div>
 
-            {/* H1 Heading */}
-            <h1 className="text-[34px] sm:text-[42px] lg:text-[44px] xl:text-[50px] font-extrabold text-[#111111] leading-[1.08] tracking-tight">
+            {/* H1 Heading (Larger) */}
+            <h1 className="text-[38px] sm:text-[46px] lg:text-[50px] xl:text-[56px] font-extrabold text-[#111111] leading-[1.06] tracking-tight">
               Пластиковые окна <br />
               и остекление
             </h1>
 
-            {/* Handwritten Accent with Red Swoosh */}
-            <div className="relative inline-block mt-1 sm:mt-1.5 mb-3 sm:mb-4">
-              <span className="font-script text-[32px] sm:text-[38px] lg:text-[40px] xl:text-[44px] text-[#111111] font-bold tracking-normal italic leading-none">
+            {/* Handwritten Accent with Red Swoosh (Larger) */}
+            <div className="relative inline-block mt-1 sm:mt-2 mb-3.5 sm:mb-5">
+              <span className="font-script text-[36px] sm:text-[44px] lg:text-[46px] xl:text-[52px] text-[#111111] font-bold tracking-normal italic leading-none">
                 от производителя
               </span>
               <svg
-                className="w-48 sm:w-56 h-3 text-[#E50916] -mt-1"
+                className="w-56 sm:w-64 h-3.5 text-[#E50916] -mt-1"
                 viewBox="0 0 200 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,71 +41,71 @@ export const Hero: React.FC<HeroProps> = ({ onStartQuiz }) => {
                 <path
                   d="M2 7C50 1.5 140 1 198 9.5"
                   stroke="currentColor"
-                  strokeWidth="3.2"
+                  strokeWidth="3.4"
                   strokeLinecap="round"
                 />
               </svg>
             </div>
 
-            {/* Subtitle */}
-            <p className="text-[15px] sm:text-[16px] xl:text-[17px] text-[#333333] font-medium mb-6 lg:mb-7 leading-relaxed">
+            {/* Subtitle (Larger) */}
+            <p className="text-[17px] sm:text-[18.5px] xl:text-[20px] text-[#333333] font-medium mb-7 lg:mb-8 leading-relaxed">
               Свой завод, монтаж по ГОСТ, замер бесплатно
             </p>
 
-            {/* CTA Button + Phone Row */}
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-6 lg:mb-8">
+            {/* CTA Button + Phone Row (Larger) */}
+            <div className="flex flex-wrap items-center gap-5 sm:gap-7 mb-7 lg:mb-9">
               <button
                 type="button"
                 onClick={onStartQuiz}
-                className="bg-[#E50916] hover:bg-[#D00814] active:scale-[0.98] text-white px-7 py-3.5 sm:py-4 rounded-lg font-bold text-[15px] sm:text-[16px] flex items-center gap-2.5 transition-all shadow-md hover:shadow-lg cursor-pointer group whitespace-nowrap"
+                className="bg-[#E50916] hover:bg-[#D00814] active:scale-[0.98] text-white px-8 sm:px-9 py-4 sm:py-4.5 rounded-xl font-bold text-[16.5px] sm:text-[17.5px] flex items-center gap-3 transition-all shadow-md hover:shadow-xl cursor-pointer group whitespace-nowrap"
               >
                 <span>Рассчитать за 1 минуту</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </button>
 
-              <div className="flex items-center gap-2.5">
-                <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
-                  <Phone className="w-4.5 h-4.5 fill-current" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
+                  <Phone className="w-5 h-5 fill-current" />
                 </div>
                 <div>
                   <a
                     href="tel:84012376868"
-                    className="block font-bold text-[16px] text-[#111111] hover:text-[#E50916] transition-colors leading-tight"
+                    className="block font-bold text-[17.5px] sm:text-[18.5px] text-[#111111] hover:text-[#E50916] transition-colors leading-tight"
                   >
                     8 (4012) 37-68-68
                   </a>
-                  <span className="text-[11px] text-[#777777] font-medium block">
+                  <span className="text-[12px] sm:text-[12.5px] text-[#777777] font-medium block mt-0.5">
                     Звоните с 8.00 до 20.00
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* 3 Key Advantages with Icons */}
-            <div className="grid grid-cols-3 gap-3 pt-5 border-t border-gray-100 max-w-[500px]">
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
-                  <Factory className="w-4 h-4" />
+            {/* 3 Key Advantages with Icons (Larger) */}
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-100 max-w-[540px]">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
+                  <Factory className="w-5 h-5" />
                 </div>
-                <div className="text-[11.5px] sm:text-[12.5px] font-semibold text-[#222222] leading-tight">
+                <div className="text-[12.5px] sm:text-[13.5px] font-semibold text-[#222222] leading-tight">
                   Собственное <br />производство
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
-                  <ShieldCheck className="w-4 h-4" />
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
+                  <ShieldCheck className="w-5 h-5" />
                 </div>
-                <div className="text-[11.5px] sm:text-[12.5px] font-semibold text-[#222222] leading-tight">
+                <div className="text-[12.5px] sm:text-[13.5px] font-semibold text-[#222222] leading-tight">
                   Монтаж <br />по ГОСТ
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
-                  <Truck className="w-4 h-4" />
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-[#E50916] flex-shrink-0">
+                  <Truck className="w-5 h-5" />
                 </div>
-                <div className="text-[11.5px] sm:text-[12.5px] font-semibold text-[#222222] leading-tight">
+                <div className="text-[12.5px] sm:text-[13.5px] font-semibold text-[#222222] leading-tight">
                   Замер <br />бесплатно
                 </div>
               </div>
@@ -113,26 +113,26 @@ export const Hero: React.FC<HeroProps> = ({ onStartQuiz }) => {
 
           </div>
 
-          {/* Right Column: Centered Photo Placeholder Frame (with equal space on both sides) */}
+          {/* Right Column: Centered Photo Placeholder Frame (Enlarged and Higher) */}
           <div className="hidden lg:flex lg:col-span-6 xl:col-span-6 justify-center items-center w-full">
-            <div className="w-full max-w-[540px] aspect-[4/3] rounded-3xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-50 via-gray-100/70 to-gray-200/50 flex flex-col items-center justify-center p-8 relative overflow-hidden shadow-inner mx-auto">
+            <div className="w-full max-w-[620px] h-[480px] xl:h-[530px] rounded-3xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-50 via-gray-100/70 to-gray-200/50 flex flex-col items-center justify-center p-8 relative overflow-hidden shadow-inner mx-auto">
               
               {/* Subtle grid pattern background */}
               <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] [background-size:16px_16px] opacity-40 pointer-events-none" />
 
               {/* Placeholder Center Icon & Text */}
               <div className="flex flex-col items-center justify-center text-center z-10">
-                <div className="w-16 h-16 rounded-2xl bg-white shadow-md border border-gray-200 flex items-center justify-center text-gray-400 mb-3.5">
-                  <svg className="w-8 h-8 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <div className="w-20 h-20 rounded-2xl bg-white shadow-md border border-gray-200 flex items-center justify-center text-gray-400 mb-4">
+                  <svg className="w-10 h-10 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                     <circle cx="8.5" cy="8.5" r="1.5" />
                     <polyline points="21 15 16 10 5 21" />
                   </svg>
                 </div>
-                <div className="font-extrabold text-[16px] sm:text-[18px] text-gray-700 tracking-tight">
+                <div className="font-extrabold text-[18px] sm:text-[20px] text-gray-700 tracking-tight">
                   Плашка под главное фото
                 </div>
-                <div className="text-[12.5px] text-gray-500 font-medium mt-1">
+                <div className="text-[13.5px] sm:text-[14.5px] text-gray-500 font-medium mt-1.5">
                   Фото директора на собственном производстве
                 </div>
               </div>

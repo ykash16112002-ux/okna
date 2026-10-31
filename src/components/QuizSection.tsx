@@ -130,13 +130,13 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
                 Квиз-расчёт — 5 простых шагов
               </h2>
               
-              <div className="flex items-center gap-3 mt-1.5 flex-wrap">
-                <span className="text-[13.5px] sm:text-[14px] text-[#A8A8A8] font-medium">
+              <div className="flex items-center gap-3 mt-2 flex-wrap">
+                <span className="text-[14px] sm:text-[15px] text-[#B0B0B0] font-medium">
                   Оставьте заявку, и мы подберём оптимальное решение под ваш объект
                 </span>
-                {/* Red decorative squiggle next to subtitle */}
+                {/* Larger Red decorative squiggle next to subtitle */}
                 <svg
-                  className="w-14 sm:w-16 h-4 text-[#E50916] inline-block flex-shrink-0"
+                  className="w-20 sm:w-24 h-5 text-[#E50916] inline-block flex-shrink-0"
                   viewBox="0 0 60 16"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +144,7 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
                   <path
                     d="M2 13L15 3L30 11L45 4L58 8"
                     stroke="currentColor"
-                    strokeWidth="2.8"
+                    strokeWidth="3.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
@@ -152,8 +152,8 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
               </div>
             </div>
 
-            {/* 5 Connected Steps in One Horizontal Flow */}
-            <div className="flex items-start justify-between gap-2 sm:gap-3 mb-9 overflow-x-auto pb-2">
+            {/* 5 Connected Steps in One Horizontal Flow (Enlarged Text) */}
+            <div className="flex items-start justify-between gap-3 sm:gap-4 mb-9 overflow-x-auto pb-2">
               {stepsList.map((step, idx) => (
                 <React.Fragment key={step.num}>
                   {/* Step Item */}
@@ -162,16 +162,16 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
                       setCurrentStep(step.num);
                       setIsModalOpen(true);
                     }}
-                    className="flex items-start gap-2.5 min-w-[110px] sm:min-w-0 flex-1 cursor-pointer group"
+                    className="flex items-start gap-3 min-w-[130px] sm:min-w-0 flex-1 cursor-pointer group"
                   >
-                    <div className="w-6 h-6 rounded-full bg-[#E50916] text-white flex items-center justify-center font-extrabold text-[12px] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform shadow-xs">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E50916] text-white flex items-center justify-center font-extrabold text-[13px] sm:text-[14px] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform shadow-xs">
                       {step.num}
                     </div>
                     <div>
-                      <div className="font-extrabold text-[12.5px] sm:text-[13px] text-white group-hover:text-[#E50916] transition-colors leading-snug">
+                      <div className="font-extrabold text-[14px] sm:text-[15px] text-white group-hover:text-[#E50916] transition-colors leading-snug">
                         {step.title}
                       </div>
-                      <div className="text-[10px] sm:text-[11px] text-[#777777] leading-tight mt-0.5">
+                      <div className="text-[11.5px] sm:text-[12px] text-[#8E8E8E] leading-tight mt-1">
                         {step.sub}
                       </div>
                     </div>
@@ -179,8 +179,8 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
 
                   {/* Connecting line between steps */}
                   {idx < stepsList.length - 1 && (
-                    <div className="hidden md:flex items-center pt-2.5 flex-shrink-0">
-                      <div className="w-4 sm:w-6 lg:w-8 h-[1px] bg-[#333333]" />
+                    <div className="hidden md:flex items-center pt-3 flex-shrink-0">
+                      <div className="w-4 sm:w-6 lg:w-8 h-[1px] bg-[#3A3A3A]" />
                     </div>
                   )}
                 </React.Fragment>
@@ -195,40 +195,43 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
                   setCurrentStep(1);
                   setIsModalOpen(true);
                 }}
-                className="bg-[#E50916] hover:bg-[#D00814] active:scale-[0.98] text-white px-8 py-3.5 rounded font-bold text-[15px] flex items-center gap-2.5 transition-all shadow-md cursor-pointer"
+                className="bg-[#E50916] hover:bg-[#D00814] active:scale-[0.98] text-white px-9 py-4 rounded-xl font-bold text-[16px] flex items-center gap-2.5 transition-all shadow-md hover:shadow-lg cursor-pointer"
               >
                 <span>Начать расчёт</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4.5 h-4.5" />
               </button>
             </div>
 
           </div>
 
-          {/* Right Column (2.5 - 3 cols): Window Photo Card + 15 Min Clock + Red Ribbon */}
+          {/* Right Column: Taller and stretched Photo Placeholder Card + 15 Min Clock */}
           <div className="lg:col-span-3 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[240px] sm:max-w-[260px] bg-[#181818] border border-[#2B2B2B] rounded-2xl p-3.5 flex flex-col justify-between shadow-xl">
+            <div className="relative w-full max-w-[270px] sm:max-w-[290px] bg-[#181818] border border-[#2B2B2B] rounded-2xl p-4 flex flex-col justify-between shadow-2xl">
               
-              {/* Photo Placeholder Frame */}
-              <div className="aspect-[4/3] rounded-xl overflow-hidden mb-3 border-2 border-dashed border-[#3A3A3A] bg-[#202020] flex flex-col items-center justify-center text-center p-3">
-                <div className="w-8 h-8 rounded-lg bg-[#2A2A2A] border border-white/10 flex items-center justify-center text-zinc-400 mb-1.5">
-                  <svg className="w-4.5 h-4.5 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+              {/* Photo Placeholder Frame (Taller and stretched) */}
+              <div className="h-[170px] sm:h-[190px] w-full rounded-xl overflow-hidden mb-3.5 border-2 border-dashed border-[#444444] bg-[#222222] flex flex-col items-center justify-center text-center p-4">
+                <div className="w-10 h-10 rounded-xl bg-[#2D2D2D] border border-white/10 flex items-center justify-center text-zinc-400 mb-2">
+                  <svg className="w-5 h-5 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                     <circle cx="8.5" cy="8.5" r="1.5" />
                     <polyline points="21 15 16 10 5 21" />
                   </svg>
                 </div>
-                <div className="text-[10.5px] font-bold text-zinc-300">
+                <div className="text-[12px] font-bold text-zinc-300">
                   Плашка под фото
+                </div>
+                <div className="text-[10px] text-zinc-500 mt-0.5">
+                  Остекление объекта
                 </div>
               </div>
 
               {/* Clock + Text */}
               <div className="p-1 pt-0">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-full border border-white/80 flex items-center justify-center text-white flex-shrink-0">
-                    <Clock className="w-4 h-4 stroke-[2]" />
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full border border-white/80 flex items-center justify-center text-white flex-shrink-0">
+                    <Clock className="w-4.5 h-4.5 stroke-[2]" />
                   </div>
-                  <div className="text-[12px] font-bold text-white leading-tight">
+                  <div className="text-[13px] font-bold text-white leading-tight">
                     Ориентировочная <br />
                     смета в течение <br />
                     <span className="text-white">15 минут</span>
@@ -237,7 +240,7 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
 
                 {/* Hand-drawn neon red curve going under the card */}
                 <svg
-                  className="w-full h-6 text-[#E50916] mt-2"
+                  className="w-full h-7 text-[#E50916] mt-2.5"
                   viewBox="0 0 160 26"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -245,7 +248,7 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
                   <path
                     d="M4 22C45 2 110 28 156 6"
                     stroke="currentColor"
-                    strokeWidth="3.2"
+                    strokeWidth="3.6"
                     strokeLinecap="round"
                   />
                 </svg>

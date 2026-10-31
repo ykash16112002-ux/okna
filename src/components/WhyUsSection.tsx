@@ -49,13 +49,13 @@ export const WhyUsSection: React.FC = () => {
     <section className="bg-white pt-10 sm:pt-14 pb-2 sm:pb-3">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12">
         
-        {/* Section Heading + Exact Red Dynamic Swoosh Arrow from Reference */}
+        {/* Section Heading + Larger Red Dynamic Swoosh Arrow */}
         <div className="flex items-center gap-2 mb-6 sm:mb-7">
           <h2 className="text-[28px] sm:text-[34px] xl:text-[38px] font-extrabold text-[#111111] tracking-tight">
             Почему выбирают нас
           </h2>
           <svg
-            className="w-10 sm:w-12 h-7 sm:h-8 text-[#E50916] ml-2 -mb-2 flex-shrink-0"
+            className="w-14 sm:w-16 h-10 sm:h-11 text-[#E50916] ml-2 -mb-2 flex-shrink-0"
             viewBox="0 0 54 36"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -63,15 +63,15 @@ export const WhyUsSection: React.FC = () => {
             <path
               d="M4 22C16 31 34 33 46 16C49 12 51 8 52 4M46 16L38 18M46 16L48 24"
               stroke="currentColor"
-              strokeWidth="3.2"
+              strokeWidth="3.6"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
           </svg>
         </div>
 
-        {/* Layout: 4 compact text cards on left + visibly taller photo placeholder frame on right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3.5 lg:gap-4 items-center">
+        {/* Layout: 4 compact text cards on left + significantly taller photo placeholder frame on right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3.5 lg:gap-5 items-center">
           
           {/* Left: 4 Cards placed side-by-side in one row (7 cols on lg), compact height */}
           <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-3.5 items-center">
@@ -98,32 +98,32 @@ export const WhyUsSection: React.FC = () => {
             ))}
           </div>
 
-          {/* Right: Noticeably taller Photo Placeholder Frame (higher than text cards) with 25 Years badge (5 cols on lg) */}
+          {/* Right: Significantly taller Photo Placeholder Frame (higher than text cards) with 25 Years badge */}
           <div className="lg:col-span-5 flex">
-            <div className="w-full rounded-2xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-50 via-gray-100/60 to-gray-200/40 relative group flex flex-col items-center justify-center p-6 h-[195px] sm:h-[215px] shadow-2xs hover:border-[#E50916]/40 transition-colors">
+            <div className="w-full rounded-2xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-50 via-gray-100/60 to-gray-200/40 relative group flex flex-col items-center justify-center p-6 h-[250px] sm:h-[275px] shadow-2xs hover:border-[#E50916]/40 transition-colors">
               
               {/* Photo Placeholder icon and caption */}
               <div className="flex flex-col items-center justify-center text-center">
-                <div className="w-12 h-12 rounded-xl bg-white shadow-xs border border-gray-200 flex items-center justify-center text-gray-400 mb-2 group-hover:scale-105 transition-transform">
-                  <svg className="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <div className="w-14 h-14 rounded-2xl bg-white shadow-xs border border-gray-200 flex items-center justify-center text-gray-400 mb-2.5 group-hover:scale-105 transition-transform">
+                  <svg className="w-7 h-7 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                     <circle cx="8.5" cy="8.5" r="1.5" />
                     <polyline points="21 15 16 10 5 21" />
                   </svg>
                 </div>
-                <div className="font-extrabold text-[14px] sm:text-[15px] text-gray-700 tracking-tight">
+                <div className="font-extrabold text-[15px] sm:text-[16px] text-gray-700 tracking-tight">
                   Плашка под фото
                 </div>
-                <div className="text-[11.5px] text-gray-500 font-medium mt-0.5">
+                <div className="text-[12px] text-gray-500 font-medium mt-0.5">
                   Собственное производство окон ПВХ
                 </div>
               </div>
 
               {/* Authentic 25 years badge in bottom-right corner */}
-              <div className="absolute bottom-2.5 right-2.5 sm:bottom-3.5 sm:right-3.5 w-16 h-16 sm:w-18 sm:h-18 rounded-full bg-[#E50916] text-white flex flex-col items-center justify-center shadow-md border-2 border-white/20 select-none pointer-events-none">
-                <span className="font-extrabold text-[19px] sm:text-[22px] leading-none tracking-tight">25</span>
-                <span className="text-[8.5px] sm:text-[9.5px] font-bold leading-tight uppercase tracking-wider">лет</span>
-                <span className="text-[8.5px] sm:text-[9.5px] font-bold leading-tight uppercase tracking-wider">опыта</span>
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-18 h-18 sm:w-20 sm:h-20 rounded-full bg-[#E50916] text-white flex flex-col items-center justify-center shadow-lg border-2 border-white/20 select-none pointer-events-none">
+                <span className="font-extrabold text-[22px] sm:text-[24px] leading-none tracking-tight">25</span>
+                <span className="text-[9.5px] sm:text-[10px] font-bold leading-tight uppercase tracking-wider">лет</span>
+                <span className="text-[9.5px] sm:text-[10px] font-bold leading-tight uppercase tracking-wider">опыта</span>
               </div>
             </div>
           </div>

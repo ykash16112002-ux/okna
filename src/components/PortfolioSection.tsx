@@ -60,10 +60,10 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onOpenConsul
           <button
             type="button"
             onClick={onOpenConsultation}
-            className="inline-flex items-center gap-1.5 text-[13.5px] font-bold text-[#E50916] hover:text-[#C50713] transition-colors cursor-pointer"
+            className="group inline-flex items-center gap-1.5 text-[13.5px] font-bold text-[#E50916] hover:text-[#C50713] transition-colors cursor-pointer"
           >
             <span>Все объекты</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
           </button>
         </div>
 
@@ -73,14 +73,14 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onOpenConsul
             <div
               key={item.id}
               onClick={() => setActiveItem(item)}
-              className="group bg-[#FAFAFA] border border-[#ECECEC] rounded-2xl overflow-hidden hover:border-[#E50916]/50 transition-all cursor-pointer shadow-xs hover:shadow-md flex flex-col justify-between"
+              className="group bg-[#FAFAFA] border border-[#ECECEC] rounded-2xl overflow-hidden hover:border-[#E50916]/50 transition-colors cursor-pointer shadow-xs flex flex-col justify-between"
             >
               {/* Photo */}
               <div className="aspect-[4/3] w-full overflow-hidden bg-gray-100 relative">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover"
                   loading="eager"
                 />
               </div>
@@ -134,10 +134,10 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onOpenConsul
                   setActiveItem(null);
                   onOpenConsultation();
                 }}
-                className="w-full bg-[#E50916] hover:bg-[#D00814] text-white py-3 rounded-lg font-bold text-[14px] flex items-center justify-center gap-2 cursor-pointer transition-colors"
+                className="group w-full bg-[#E50916] hover:bg-[#D00814] text-white py-3 rounded-lg font-bold text-[14px] flex items-center justify-center gap-2 cursor-pointer transition-colors"
               >
                 <span>Рассчитать подобный объект</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

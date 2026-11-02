@@ -19,10 +19,10 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({ onOpenAllReviews
           <button
             type="button"
             onClick={onOpenAllReviews}
-            className="inline-flex items-center gap-1.5 text-[13.5px] font-bold text-[#E50916] hover:text-[#C50713] transition-colors cursor-pointer"
+            className="group inline-flex items-center gap-1.5 text-[13.5px] font-bold text-[#E50916] hover:text-[#C50713] transition-colors cursor-pointer"
           >
             <span>Все отзывы</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
           </button>
         </div>
 

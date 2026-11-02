@@ -78,7 +78,7 @@ export const PortfolioAndReviews: React.FC<PortfolioAndReviewsProps> = ({
                 >
                   {/* Photo Placeholder Card (Плашка для фото - увеличена) */}
                   <div className="aspect-[4/3.3] sm:aspect-[4/3.2] w-full bg-gradient-to-b from-[#F6F7F9] to-[#E9ECEF] border-b border-[#E2E6EA] flex flex-col items-center justify-center text-[#8C95A5] group-hover:from-[#EEF2F6] transition-colors p-4">
-                    <div className="w-10 h-10 rounded-xl bg-white/90 shadow-xs border border-white flex items-center justify-center mb-1.5 group-hover:scale-105 transition-transform">
+                    <div className="w-10 h-10 rounded-xl bg-white/90 shadow-xs border border-white flex items-center justify-center mb-1.5">
                       <svg className="w-5 h-5 text-[#9AA3B2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                         <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                         <circle cx="8.5" cy="8.5" r="1.5" />

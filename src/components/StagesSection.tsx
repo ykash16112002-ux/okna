@@ -42,11 +42,11 @@ export const StagesSection: React.FC = () => {
           {stages.map((stage) => (
             <div
               key={stage.num}
-              className="bg-white border border-[#EDEDED] rounded-2xl p-4 sm:p-5 flex flex-col justify-start hover:border-[#E50916]/40 transition-all shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-xs group min-h-[140px]"
+              className="bg-white border border-[#EDEDED] rounded-2xl p-4 sm:p-5 flex flex-col justify-start hover:border-[#E50916]/50 transition-colors shadow-xs group min-h-[140px]"
             >
               <div className="flex items-center gap-2 mb-2.5">
                 {/* Red Step Number Badge */}
-                <div className="w-7 h-7 rounded-full bg-[#E50916] text-white flex items-center justify-center font-bold text-[13px] group-hover:scale-105 transition-transform shadow-xs flex-shrink-0">
+                <div className="w-7 h-7 rounded-full bg-[#E50916] text-white flex items-center justify-center font-bold text-[13px] shadow-xs flex-shrink-0">
                   {stage.num}
                 </div>
 

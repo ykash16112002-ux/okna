@@ -37,26 +37,139 @@ export const CloseIcon: React.FC<IconProps> = ({ className = 'w-5 h-5', ...props
   </svg>
 );
 
-export const ShieldCheckIcon: React.FC<IconProps> = ({ className = 'w-5 h-5', ...props }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-    <polyline points="9 12 11 14 15 10" />
+export const ShieldCheckIcon: React.FC<IconProps> = ({ className = 'w-6 h-6', ...props }) => (
+  <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    {/* Red outline shield */}
+    <path
+      d="M7 11C7 11 15 7 24 7C33 7 41 11 41 11V22C41 33.5 31.5 41 24 44C16.5 41 7 33.5 7 22V11Z"
+      stroke="#E50916"
+      strokeWidth="3.6"
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+    {/* Bold Red Checkmark inside */}
+    <path
+      d="M16 23.5L22 29.5L32.5 18"
+      stroke="#E50916"
+      strokeWidth="4.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
-export const FactoryIcon: React.FC<IconProps> = ({ className = 'w-5 h-5', ...props }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M2 20h20M4 20V9l6 4V5l6 4v11M18 11l4 2v7" />
-    <path d="M7 16h2M13 16h2" />
+export const AwardMedalIcon: React.FC<IconProps> = ({ className = 'w-6 h-6', ...props }) => (
+  <svg
+    className={className}
+    viewBox="0 0 100 115"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    {/* Swallowtail Ribbons behind */}
+    <path
+      d="M35 68 L20 98 L30 87 L41 97 L49 76"
+      stroke="currentColor"
+      strokeWidth="5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M65 68 L80 98 L70 87 L59 97 L51 76"
+      stroke="currentColor"
+      strokeWidth="5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    {/* 12-Lobed Scalloped Rosette */}
+    <path
+      d="M 42.88 19.44 Q 50.00 12.00 57.12 19.44 Q 67.00 16.56 69.45 26.55 Q 79.44 29.00 76.56 38.88 Q 84.00 46.00 76.56 53.12 Q 79.44 63.00 69.45 65.45 Q 67.00 75.44 57.12 72.56 Q 50.00 80.00 42.88 72.56 Q 33.00 75.44 30.55 65.45 Q 20.56 63.00 23.44 53.12 Q 16.00 46.00 23.44 38.88 Q 20.56 29.00 30.55 26.55 Q 33.00 16.56 42.88 19.44 Z"
+      stroke="currentColor"
+      strokeWidth="5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    {/* Inner Circle Ring */}
+    <circle
+      cx="50"
+      cy="46"
+      r="20"
+      stroke="currentColor"
+      strokeWidth="5"
+    />
+    {/* Shield inside ring */}
+    <path
+      d="M50 33.5 L42.5 36 C42.5 44 45.5 49.5 50 53.5 C54.5 49.5 57.5 44 57.5 36 Z"
+      stroke="currentColor"
+      strokeWidth="4.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    {/* Checkmark inside shield */}
+    <path
+      d="M46.5 43.5 L49.5 46.5 L54 40.5"
+      stroke="currentColor"
+      strokeWidth="4.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
-export const TruckIcon: React.FC<IconProps> = ({ className = 'w-5 h-5', ...props }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <rect x="1" y="3" width="15" height="13" />
-    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
-    <circle cx="5.5" cy="18.5" r="2.5" />
-    <circle cx="18.5" cy="18.5" r="2.5" />
+export const FactoryIcon: React.FC<IconProps> = ({ className = 'w-6 h-6', ...props }) => (
+  <svg className={className} viewBox="0 0 52 44" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    {/* Chimney caps and bodies */}
+    <path
+      d="M24 6H31V14H24V6Z M35 6H42V14H35V6Z"
+      fill="#E50916"
+    />
+    <path
+      d="M23 4H32V6H23V4Z M34 4H43V6H34V4Z"
+      fill="#E50916"
+    />
+    {/* Chimney white stripes */}
+    <path d="M24 9H31V10.5H24V9Z M35 9H42V10.5H35V9Z" fill="white" />
+    {/* Main factory solid body: sloped roof on left, flat right */}
+    <path
+      d="M3 24L17 16V22L24 14H46V41H3V24Z"
+      fill="#E50916"
+    />
+    {/* 6 white square windows in 2x3 grid */}
+    <rect x="7" y="28" width="4" height="4" fill="white" />
+    <rect x="13" y="28" width="4" height="4" fill="white" />
+    <rect x="19" y="28" width="4" height="4" fill="white" />
+    <rect x="7" y="34" width="4" height="4" fill="white" />
+    <rect x="13" y="34" width="4" height="4" fill="white" />
+    <rect x="19" y="34" width="4" height="4" fill="white" />
+    {/* Right white window */}
+    <rect x="33" y="28" width="4" height="4" fill="white" />
+  </svg>
+);
+
+export const TruckIcon: React.FC<IconProps> = ({ className = 'w-6 h-6', ...props }) => (
+  <svg className={className} viewBox="0 0 56 44" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    {/* Cargo box & Cab outline */}
+    <path
+      d="M4 11H34V23H44L51 29V36H47M38 36H20M11 36H4V11Z"
+      stroke="#E50916"
+      strokeWidth="3.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    {/* Cab window */}
+    <path
+      d="M36 17H43L48 23H36V17Z"
+      stroke="#E50916"
+      strokeWidth="2.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    {/* Left wheel */}
+    <circle cx="15.5" cy="36" r="5.5" stroke="#E50916" strokeWidth="3.6" fill="white" />
+    <circle cx="15.5" cy="36" r="2" fill="#E50916" />
+    {/* Right wheel */}
+    <circle cx="42.5" cy="36" r="5.5" stroke="#E50916" strokeWidth="3.6" fill="white" />
+    <circle cx="42.5" cy="36" r="2" fill="#E50916" />
   </svg>
 );
 

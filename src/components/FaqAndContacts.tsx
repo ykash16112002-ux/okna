@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Minus, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Phone, MapPin, ArrowRight } from 'lucide-react';
 import { validateLeadForm, formatPhoneNumber } from '../utils/validation.ts';
 
 interface FaqAndContactsProps {
@@ -66,14 +66,14 @@ export const FaqAndContacts: React.FC<FaqAndContactsProps> = ({
   };
 
   return (
-    <section id="faq" className="bg-[#111111] text-white py-12 sm:py-16">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12">
+    <section id="faq" className="bg-[#0B0B0C] text-white py-12 sm:py-16 lg:py-20 overflow-hidden relative border-t border-neutral-900">
+      <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         
-        {/* 3 Columns Layout matching reference photo strictly */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-stretch">
+        {/* Three Columns Grid matching reference {DBFC8EDA-18BB-4BEC-AF83-AEA9DA140C57}.png */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-6 xl:gap-7 items-stretch max-w-[1480px] mx-auto">
           
-          {/* Column 1: FAQ Accordion (4 cols) */}
-          <div className="lg:col-span-4 bg-[#141414] border border-[#222222] rounded-3xl p-6 sm:p-7 flex flex-col justify-start shadow-xl">
+          {/* Card 1: Left - FAQ Accordion */}
+          <div className="bg-[#151517] border border-[#26262B] rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 flex flex-col justify-start">
             <h3 className="text-[20px] sm:text-[22px] font-extrabold text-white mb-6 tracking-tight">
               Часто задаваемые вопросы
             </h3>
@@ -84,22 +84,22 @@ export const FaqAndContacts: React.FC<FaqAndContactsProps> = ({
                 return (
                   <div
                     key={idx}
-                    className="border border-[#2C2C2C] hover:border-[#3C3C3C] rounded-2xl overflow-hidden bg-[#1A1A1A] transition-colors"
+                    className="border border-[#28282C] rounded-2xl overflow-hidden bg-[#1B1B1E] transition-colors"
                   >
                     <button
                       type="button"
                       onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
-                      className="w-full px-4 py-3.5 text-left flex items-center justify-between gap-3 text-[13.5px] font-medium text-white hover:text-white transition-colors cursor-pointer"
+                      className="w-full px-4 py-3.5 text-left flex items-center justify-between gap-3 text-[13.5px] sm:text-[14px] font-medium text-white transition-colors cursor-pointer"
                       aria-expanded={isOpen}
                     >
                       <span className="leading-snug">{item.q}</span>
-                      <span className="text-[18px] text-zinc-400 font-light flex-shrink-0">
+                      <span className="text-[18px] sm:text-[20px] text-zinc-400 font-light flex-shrink-0 transition-transform">
                         {isOpen ? '−' : '+'}
                       </span>
                     </button>
 
                     {isOpen && (
-                      <div className="px-4 pb-4 pt-1 text-[12.5px] text-[#A8A8A8] leading-relaxed border-t border-[#262626]">
+                      <div className="px-4 pb-4 pt-1 text-[12.5px] sm:text-[13px] text-[#A6A6A6] leading-relaxed border-t border-[#26262B]">
                         {item.a}
                       </div>
                     )}
@@ -109,23 +109,19 @@ export const FaqAndContacts: React.FC<FaqAndContactsProps> = ({
             </div>
           </div>
 
-          {/* Column 2: Central Application Form with window backdrop (4 cols) */}
-          <div className="lg:col-span-4 relative rounded-3xl overflow-hidden border border-gray-200 bg-white text-[#111111] shadow-xl flex flex-col justify-between">
-            {/* Subtle soft window silhouette background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#F8F9FA]/80 via-white to-white pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-[45%] opacity-15 pointer-events-none bg-[radial-gradient(#94A3B8_1px,transparent_1px)] [background-size:12px_12px]" />
-
-            <div className="p-6 sm:p-7 z-10 flex flex-col justify-between h-full">
+          {/* Card 2: Center - Application Form */}
+          <div className="bg-white text-[#111111] rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 xl:p-9 shadow-xl border border-neutral-100 flex flex-col justify-between">
+            <div className="flex flex-col justify-between h-full">
               <div>
-                <h3 className="text-[22px] sm:text-[24px] font-extrabold text-[#111111] tracking-tight leading-snug mb-1.5">
+                <h3 className="text-[22px] sm:text-[26px] font-extrabold text-[#111111] tracking-tight leading-tight mb-2">
                   Остались вопросы?
                 </h3>
-                <p className="text-[13px] sm:text-[13.5px] text-[#555555] leading-snug mb-6">
+                <p className="text-[13.5px] sm:text-[14.5px] text-[#555555] leading-snug mb-6">
                   Оставьте заявку — мы ответим <br className="hidden sm:inline" />и поможем с выбором.
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-3.5">
-                  {/* Two inputs: 1-col on mobile, side-by-side on tablet/desktop */}
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* Two inputs side-by-side */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                       <input
@@ -136,12 +132,12 @@ export const FaqAndContacts: React.FC<FaqAndContactsProps> = ({
                           setName(e.target.value);
                           if (formErrors.name) setFormErrors((p) => ({ ...p, name: undefined }));
                         }}
-                        className={`w-full bg-[#F7F7F7] border rounded-xl px-3.5 py-3 text-[13.5px] text-[#111111] placeholder:text-[#888888] focus:outline-none focus:border-[#E50916] transition-colors ${
-                          formErrors.name ? 'border-red-500' : 'border-[#E2E2E2]'
+                        className={`w-full bg-[#F5F5F7] border rounded-xl px-4 py-3.5 text-[14px] text-[#111111] placeholder:text-[#888888] focus:outline-none focus:border-[#E50916] transition-colors ${
+                          formErrors.name ? 'border-red-500' : 'border-[#E0E0E0]'
                         }`}
                       />
                       {formErrors.name && (
-                        <span className="text-[10.5px] text-red-500 block mt-0.5">{formErrors.name}</span>
+                        <span className="text-[11px] text-red-500 block mt-1">{formErrors.name}</span>
                       )}
                     </div>
 
@@ -151,22 +147,23 @@ export const FaqAndContacts: React.FC<FaqAndContactsProps> = ({
                         placeholder="Телефон"
                         value={phone}
                         onChange={handlePhoneChange}
-                        className={`w-full bg-[#F7F7F7] border rounded-xl px-3.5 py-3 text-[13.5px] text-[#111111] placeholder:text-[#888888] focus:outline-none focus:border-[#E50916] transition-colors ${
-                          formErrors.phone ? 'border-red-500' : 'border-[#E2E2E2]'
+                        className={`w-full bg-[#F5F5F7] border rounded-xl px-4 py-3.5 text-[14px] text-[#111111] placeholder:text-[#888888] focus:outline-none focus:border-[#E50916] transition-colors ${
+                          formErrors.phone ? 'border-red-500' : 'border-[#E0E0E0]'
                         }`}
                       />
                       {formErrors.phone && (
-                        <span className="text-[10.5px] text-red-500 block mt-0.5">{formErrors.phone}</span>
+                        <span className="text-[11px] text-red-500 block mt-1">{formErrors.phone}</span>
                       )}
                     </div>
                   </div>
 
-                  {/* Bright Red Full-width Button */}
+                  {/* Bright Red Full-width Button with Arrow translation on hover */}
                   <button
                     type="submit"
-                    className="w-full bg-[#E50916] hover:bg-[#D00814] active:scale-[0.98] text-white py-3.5 rounded-xl font-bold text-[15px] transition-all shadow-md hover:shadow-lg cursor-pointer"
+                    className="group w-full bg-[#E50916] hover:bg-[#D00814] active:scale-[0.98] text-white py-4 rounded-xl font-bold text-[16px] flex items-center justify-center gap-2.5 transition-colors cursor-pointer shadow-md"
                   >
-                    Рассчитать
+                    <span>Рассчитать</span>
+                    <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1.5" />
                   </button>
 
                   {/* 152-FZ Consent Checkbox */}
@@ -179,9 +176,9 @@ export const FaqAndContacts: React.FC<FaqAndContactsProps> = ({
                           setConsent(e.target.checked);
                           if (formErrors.consent) setFormErrors((p) => ({ ...p, consent: undefined }));
                         }}
-                        className="mt-0.5 rounded border-red-500 text-[#E50916] focus:ring-red-500 accent-[#E50916] cursor-pointer"
+                        className="mt-0.5 rounded border-red-500 text-[#E50916] focus:ring-red-500 accent-[#E50916] cursor-pointer flex-shrink-0"
                       />
-                      <span className="text-[10.5px] text-[#777777] leading-tight">
+                      <span className="text-[11px] text-[#777777] leading-tight">
                         Я согласен с{' '}
                         <button
                           type="button"
@@ -194,7 +191,7 @@ export const FaqAndContacts: React.FC<FaqAndContactsProps> = ({
                       </span>
                     </label>
                     {formErrors.consent && (
-                      <span className="text-[10.5px] text-red-500 block mt-0.5">{formErrors.consent}</span>
+                      <span className="text-[11px] text-red-500 block mt-1">{formErrors.consent}</span>
                     )}
                   </div>
                 </form>
@@ -202,53 +199,52 @@ export const FaqAndContacts: React.FC<FaqAndContactsProps> = ({
             </div>
           </div>
 
-          {/* Column 3: Contacts & Map Placeholder Frame (4 cols) */}
-          <div id="contacts" className="lg:col-span-4 bg-[#141414] border border-[#222222] rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xl">
+          {/* Card 3: Right - Contacts & Map Frame */}
+          <div id="contacts" className="bg-[#151517] border border-[#26262B] rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 flex flex-col justify-between">
             <div>
               <h3 className="text-[20px] sm:text-[22px] font-extrabold text-white mb-5 tracking-tight">
                 Наши контакты
               </h3>
 
               {/* Phone with Red Icon */}
-              <div className="flex items-start gap-3 mb-4">
-                <div className="w-8 h-8 rounded-full bg-red-950/60 border border-red-800/40 flex items-center justify-center text-[#E50916] flex-shrink-0 mt-0.5">
-                  <Phone className="w-4 h-4 fill-[#E50916]" />
+              <div className="flex items-start gap-3.5 mb-4">
+                <div className="w-9 h-9 rounded-full bg-red-950/70 border border-red-800/40 flex items-center justify-center text-[#E50916] flex-shrink-0 mt-0.5">
+                  <Phone className="w-4.5 h-4.5 fill-[#E50916]" />
                 </div>
                 <div>
                   <a
                     href="tel:84012376868"
-                    className="block font-bold text-[16px] text-white hover:text-[#E50916] transition-colors leading-tight"
+                    className="block font-bold text-[17px] text-white hover:text-[#E50916] transition-colors leading-tight"
                   >
                     8 (4012) 37-68-68
                   </a>
-                  <span className="text-[11.5px] text-[#888888] font-medium block mt-0.5">
+                  <span className="text-[12px] text-[#888888] font-medium block mt-0.5">
                     Звонить с 8:00 до 20:00
                   </span>
                 </div>
               </div>
 
               {/* Address with Red Map Pin */}
-              <div className="flex items-start gap-3 mb-5">
-                <div className="w-8 h-8 rounded-full bg-red-950/60 border border-red-800/40 flex items-center justify-center text-[#E50916] flex-shrink-0 mt-0.5">
-                  <MapPin className="w-4 h-4" />
+              <div className="flex items-start gap-3.5 mb-6">
+                <div className="w-9 h-9 rounded-full bg-red-950/70 border border-red-800/40 flex items-center justify-center text-[#E50916] flex-shrink-0 mt-0.5">
+                  <MapPin className="w-4.5 h-4.5" />
                 </div>
-                <div className="text-[13.5px] text-[#E0E0E0] leading-snug">
+                <div className="text-[14px] text-[#E0E0E0] leading-snug">
                   ул. Согласия, 46 <br />
                   <span className="text-[#888888]">Калининград</span>
                 </div>
               </div>
             </div>
 
-            {/* Map Placeholder Frame ("плашка под карты") matching reference */}
+            {/* Map Placeholder Frame ("плашка под карту") matching reference with button arrow translation */}
             <a
               href="https://yandex.ru/maps/?text=Калининград+ул.+Согласия+46"
               target="_blank"
               rel="noopener noreferrer"
-              className="block relative rounded-2xl overflow-hidden border border-[#2F2F2F] bg-[#1E2024] group hover:border-[#E50916]/50 transition-all shadow-md aspect-[16/9] w-full"
+              className="block relative rounded-2xl overflow-hidden border border-[#2F2F35] bg-[#1E2024] group aspect-[16/9] w-full mt-4"
             >
               {/* Stylized vector map background representation */}
               <div className="absolute inset-0 bg-[#E8ECEF] opacity-90">
-                {/* SVG Map Roads and Blocks */}
                 <svg className="w-full h-full object-cover" viewBox="0 0 400 220" fill="none">
                   <rect width="400" height="220" fill="#E8ECEF" />
                   {/* Green park zones */}
@@ -267,7 +263,7 @@ export const FaqAndContacts: React.FC<FaqAndContactsProps> = ({
               </div>
 
               {/* Map Red Pin Icon */}
-              <div className="absolute top-[42%] left-[48%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group-hover:scale-110 transition-transform select-none pointer-events-none">
+              <div className="absolute top-[42%] left-[48%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center select-none pointer-events-none">
                 <div className="w-8 h-8 rounded-full bg-[#E50916] text-white flex items-center justify-center shadow-lg border-2 border-white">
                   <MapPin className="w-4 h-4 fill-white" />
                 </div>
@@ -279,10 +275,10 @@ export const FaqAndContacts: React.FC<FaqAndContactsProps> = ({
                 Плашка под карту
               </div>
 
-              {/* Red pill button "Как проехать →" in bottom-right corner exactly as in reference */}
+              {/* Red pill button "Как проехать →" in bottom-right corner with smooth hover arrow shift */}
               <div className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 bg-[#E50916] group-hover:bg-[#D00814] text-white px-3.5 py-1.5 sm:py-2 rounded-xl text-[12px] sm:text-[12.5px] font-bold flex items-center gap-1.5 shadow-lg transition-colors">
                 <span>Как проехать</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
               </div>
             </a>
 

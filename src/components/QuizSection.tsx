@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Clock, X, Check, Send, ArrowLeft } from 'lucide-react';
 import { validateLeadForm, formatPhoneNumber } from '../utils/validation.ts';
 import { computeQuizEstimate } from '../utils/calculator.ts';
+import { APP_IMAGES } from '../constants/images.ts';
 
 interface QuizSectionProps {
   selectedCategory?: string;
@@ -115,22 +116,22 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
   ];
 
   return (
-    <section id="quiz" className="bg-[#111111] text-white py-14 sm:py-20 relative overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12">
+    <section id="quiz" className="bg-[#111111] text-white py-8 sm:py-10 lg:py-12 relative overflow-hidden">
+      <div className="max-w-[1780px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
         
         {/* Main Grid: Left Steps + CTA, Right Clock Card */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 xl:gap-10 items-center">
           
           {/* Left Column (9 cols on desktop): Header, 5 connected steps, Button */}
           <div className="lg:col-span-9 flex flex-col justify-between">
             
             {/* Title & Subtitle */}
-            <div className="mb-8 sm:mb-10">
-              <h2 className="text-[30px] sm:text-[36px] xl:text-[40px] font-extrabold text-white tracking-tight leading-tight">
+            <div className="mb-5 sm:mb-6">
+              <h2 className="text-[28px] sm:text-[34px] xl:text-[38px] font-extrabold text-white tracking-tight leading-tight">
                 Квиз-расчёт — 5 простых шагов
               </h2>
               
-              <div className="flex items-center gap-2.5 sm:gap-3 mt-2 flex-wrap">
+              <div className="flex items-center gap-2.5 sm:gap-3 mt-1.5 flex-wrap">
                 <span className="text-[13.5px] sm:text-[15px] text-[#B0B0B0] font-medium leading-relaxed">
                   Оставьте заявку, и мы подберём оптимальное решение под ваш объект
                 </span>
@@ -153,7 +154,7 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
             </div>
 
             {/* 5 Steps: Mobile clean vertical/2-col flow, Desktop horizontal flow */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:items-start md:justify-between gap-2.5 sm:gap-4 mb-8 sm:mb-9">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:items-start md:justify-between gap-2.5 sm:gap-3.5 mb-5 sm:mb-6">
               {stepsList.map((step, idx) => (
                 <React.Fragment key={step.num}>
                   {/* Step Item */}
@@ -164,7 +165,7 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
                     }}
                     className="flex items-center md:items-start gap-3 p-3 md:p-0 rounded-xl bg-[#1B1B1B] md:bg-transparent border border-[#2B2B2B] md:border-transparent flex-1 cursor-pointer group hover:border-[#E50916]/40 transition-colors"
                   >
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E50916] text-white flex items-center justify-center font-extrabold text-[13px] sm:text-[14px] flex-shrink-0 group-hover:scale-110 transition-transform shadow-xs">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E50916] text-white flex items-center justify-center font-extrabold text-[13px] sm:text-[14px] flex-shrink-0 shadow-xs">
                       {step.num}
                     </div>
                     <div>
@@ -195,10 +196,10 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
                   setCurrentStep(1);
                   setIsModalOpen(true);
                 }}
-                className="bg-[#E50916] hover:bg-[#D00814] active:scale-[0.98] text-white px-9 py-4 rounded-xl font-bold text-[16px] flex items-center gap-2.5 transition-all shadow-md hover:shadow-lg cursor-pointer"
+                className="group bg-[#E50916] hover:bg-[#D00814] active:scale-[0.98] text-white px-9 py-4 rounded-xl font-bold text-[16px] flex items-center gap-2.5 transition-colors shadow-md cursor-pointer"
               >
                 <span>Начать расчёт</span>
-                <ArrowRight className="w-4.5 h-4.5" />
+                <ArrowRight className="w-4.5 h-4.5 transition-transform duration-200 group-hover:translate-x-1.5" />
               </button>
             </div>
 
@@ -208,20 +209,17 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
           <div className="lg:col-span-3 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[270px] sm:max-w-[290px] bg-[#181818] border border-[#2B2B2B] rounded-2xl p-4 flex flex-col justify-between shadow-2xl">
               
-              {/* Photo Placeholder Frame (Taller and stretched) */}
-              <div className="h-[170px] sm:h-[190px] w-full rounded-xl overflow-hidden mb-3.5 border-2 border-dashed border-[#444444] bg-[#222222] flex flex-col items-center justify-center text-center p-4">
-                <div className="w-10 h-10 rounded-xl bg-[#2D2D2D] border border-white/10 flex items-center justify-center text-zinc-400 mb-2">
-                  <svg className="w-5 h-5 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <polyline points="21 15 16 10 5 21" />
-                  </svg>
-                </div>
-                <div className="text-[12px] font-bold text-zinc-300">
-                  Плашка под фото
-                </div>
-                <div className="text-[10px] text-zinc-500 mt-0.5">
-                  Остекление объекта
+              {/* Photo Frame with Real Image (Photo 4, без анимации приближения) */}
+              <div className="h-[170px] sm:h-[190px] w-full rounded-xl overflow-hidden mb-3.5 relative group border border-[#333333] bg-[#222222]">
+                <img
+                  src={APP_IMAGES.quizCalculation}
+                  alt="Остекление объектов — квиз расчет"
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-2 left-2.5 right-2.5 text-[11px] font-semibold text-white/90 drop-shadow-sm truncate">
+                  Панорамное остекление
                 </div>
               </div>
 
@@ -565,10 +563,10 @@ export const QuizSection: React.FC<QuizSectionProps> = ({
                 <button
                   type="button"
                   onClick={handleNextStep}
-                  className="inline-flex items-center gap-1.5 text-[12.5px] font-bold text-[#E50916] hover:text-white transition-colors cursor-pointer"
+                  className="group inline-flex items-center gap-1.5 text-[12.5px] font-bold text-[#E50916] hover:text-white transition-colors cursor-pointer"
                 >
                   <span>Далее</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
                 </button>
               </div>
             )}

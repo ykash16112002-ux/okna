@@ -112,7 +112,7 @@ export const ProfilesSection: React.FC<ProfilesSectionProps> = ({
                 onClick={onOpenPdf}
                 className="inline-flex items-center gap-2 text-[13.5px] font-semibold text-[#111111] hover:text-[#E50916] transition-colors cursor-pointer group"
               >
-                <div className="w-7 h-7 rounded-full bg-red-50 text-[#E50916] flex items-center justify-center group-hover:scale-105 transition-transform">
+                <div className="w-7 h-7 rounded-full bg-red-50 text-[#E50916] flex items-center justify-center">
                   <FileText className="w-4 h-4" />
                 </div>
                 <span className="underline underline-offset-2">Скачать паспорта профилей (PDF)</span>
